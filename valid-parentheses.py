@@ -8,6 +8,7 @@ class Solution:
     def isValid(self, s: str) -> bool:
         dic = {')': '(', ']': '[', '}': '{'}
         stack = [0]
+        print(len(stack) == 1)
 
         for paren in s:
             print(stack)
@@ -19,7 +20,7 @@ class Solution:
             elif dic[paren] != stack.pop():
                 return False
 
-        return len(stack) == 1
+        return len(stack) == 1  # return 1 true, 0 false
 
 
 a = Solution()
